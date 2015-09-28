@@ -35,6 +35,8 @@ def more_than_one(array):
 	else:
 		return False
 
+is_empty = lambda x: True if len(x) == 0 else False
+
 def is_empty(array):
 	if len(array) == 0:
 		return True

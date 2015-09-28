@@ -23,6 +23,9 @@ Package Body sort is
 			second_array : array (1 .. middle) of Integer;
 
 			begin
+				if list'Length = 2 then
+					return merge(list(1), list(2));
+				end if;
 				for i in 1 .. middle loop
 					first_array(i) := list(i);
 				end loop;
