@@ -1,0 +1,86 @@
+V "GNAT Lib v4.6"
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+
+U sort%b		sort.adb		91e290b3 NE OO PK IL KM
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U sort%s		sort.ads		4d6da1f3 EE NE OO PK IL KM
+
+D ada.ads		20070406091342 3ffc8e18
+D a-except.ads		20090727140100 0c711ac9
+D a-finali.ads		20090409150019 e5e85fa4
+D a-filico.ads		20090409150019 872dc219
+D a-inteio.ads		20070406091342 f64b89a4
+D a-ioexce.ads		20091130110856 8b9de6cd
+D a-stream.ads		20090409150019 2ca4ee37
+D a-tags.ads		20101021101406 c7695348
+D a-textio.ads		20091028140912 386df5d4
+D a-tiinio.ads		20090409150019 aa04e5d6
+D a-unccon.ads		20070406091342 f9eb8f06
+D interfac.ads		20090409150019 f77d8799
+D i-cstrea.ads		20100622165701 1bd72c32
+D sort.ads		20150927235526 4d6da1f3
+D sort.adb		20150928000749 12a94d30
+D system.ads		20140416172229 23e1f70b
+D s-crtl.ads		20100617122610 ac77b159
+D s-exctab.ads		20090417131547 66e51330
+D s-ficobl.ads		20100909103250 443b9d66
+D s-finimp.ads		20090409150019 46853fe8
+D s-finroo.ads		20090409150019 dbb860c9
+D s-parame.ads		20091130110856 9c5d83fa
+D s-secsta.ads		20090707124243 eea35a36
+D s-soflin.ads		20090729085153 9414c974
+D s-stache.ads		20090417130712 596fc1b4
+D s-stalib.ads		20101021102512 c4241c00
+D s-stoele.ads		20090417130712 facd7d98
+D s-stoele.adb		20100617152355 afc5dc80
+D s-stratt.ads		20100909123135 aedef97e
+D s-traent.ads		20090417130712 5221ee41
+D s-unstyp.ads		20090409150019 6ae15c76
+D s-wchcon.ads		20090417130712 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 15|1r6 2r6 5r29 6r29
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 15|1w10 5r33
+X 9 a-textio.ads
+49K13*Text_IO 472e16 15|2w10 6r33
+52P9*File_Type(370R9) 15|41r24
+53n23*In_File{53E9} 15|46r40
+93U14*Open 15|46s21
+99U14*Close 15|54s21
+167U14*New_Line 15|14s37
+184V13*End_Of_File{boolean} 15|48s31
+264U14*Put_Line 15|10s21
+X 10 a-tiinio.ads
+50U14*Get 15|49s29[5|18]
+65U14*Put 15|12s29[5|18] 33s37[5|18]
+X 14 sort.ads
+1K9*sort 9l5 9e9 15|4b14 64l5 64t9
+2i9*SIZE{integer} 3r41
+3A14*array_to_sort(integer)<integer> 5r31 6r36 7r35 15|8r36 19r31 20r48 40r35
+. 44r16
+5U19*sorter 5>26 15|19b19 38l13 38t19
+5a26 list{3A14} 15|19b26 27r51 30r52 37r23
+6U19*print_array 6>31 15|8b19 17l13 17t24
+6a31 list{3A14} 15|8b31 11r26 12r33
+7V18*get_array{3A14} 15|40b18 57l13 57t22
+X 15 sort.adb
+5K17 IIO=5:33 12r25 33r33 49r25
+6K17 TIO=6:33 10r17 14r33 41r20 46r17 46r36 48r27 54r17
+11i21 i{integer} 12r38 13r28
+20U27 split 20b27 20>33 35l21 35t26 37s17
+20a33 array_to_split{14|3A14} 21r37
+21i17 middle{integer} 22r43 23r44 26r39 29r39 30r57
+22a17 first_array(integer) 27m33
+23a17 second_array(integer) 30m33 32r34 33r41
+26i29 i{integer} 27r45 27r56
+29i29 i{integer} 30r46 30r66
+32i29 i{integer} 33r54
+41p9 int_file{9|52P9} 46m26 48r43 49r33 54m27
+42i9 Index{integer} 50r30 51m25 51r34
+43i9 number{integer} 49m43 50r40
+44a9 list{14|3A14} 50m25 55r24
+
