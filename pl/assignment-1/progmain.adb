@@ -2,14 +2,15 @@ with Ada.Text_IO;
 with sort;
 
 procedure progmain is
-package TIO renames Ada.Text_IO;
-use sort;
-first_array : array_to_sort;
+	package TIO renames Ada.Text_IO;
+	use sort;
+	first_array : array_to_sort (1..SIZE) := (others => 0);
 
--- task Reader is
--- 	null;
--- end Reader;
+	procedure runTasks is
 
+	begin
+		null;
+	end runTasks;
 -- task Sum is
 -- 	null;
 -- end Sum;
@@ -19,12 +20,6 @@ first_array : array_to_sort;
 -- end Printer;
 
 begin
-	-- read in array;
-	-- sort array
-	-- once sorted
-	-- 	merge array, then
-	-- 	print array
-	-- 	print sum of array
 	first_array := get_array;
 	TIO.Put_Line("Read in unsorted array.");
 	print_array(first_array);

@@ -1,12 +1,14 @@
 V "GNAT Lib v4.6"
 M P W=b
 P SS ZX
-R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnvnnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U progmain%b		progmain.adb		71ea74ee NE OO SU IL
+U progmain%b		progmain.adb		b93d13a7 NE OO SU IL
 W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W sort%s		sort.adb		sort.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
 D ada.ads		20070406091342 3ffc8e18
 D a-except.ads		20090727140100 0c711ac9
@@ -19,8 +21,8 @@ D a-textio.ads		20091028140912 386df5d4
 D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
-D progmain.adb		20150927233551 04ea20c9
-D sort.ads		20150927235526 4d6da1f3
+D progmain.adb		20151001171902 7c9089c2
+D sort.ads		20151001190847 fdc06fb1
 D system.ads		20140416172229 23e1f70b
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
@@ -39,19 +41,20 @@ D s-traent.ads		20090417130712 5221ee41
 D s-unstyp.ads		20090409150019 6ae15c76
 D s-wchcon.ads		20090417130712 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 12|1r6 5r21
+16K9*Ada 19e8 12|1r6 5r29
 X 8 a-textio.ads
-49K13*Text_IO 472e16 12|1w10 5r25
+49K13*Text_IO 472e16 12|1w10 5r33
 167U14*New_Line 12|31s13
 264U14*Put_Line 12|29s13
 X 12 progmain.adb
 4U11*progmain 4b11 33l5 33t13
-5K9 TIO=5:25 29r9 31r9
-7a1 first_array{13|3A14} 28m9 30r21 32r16
+5K17 TIO=5:33 29r9 31r9
+7a9 first_array{13|3A14} 28m9 30r21 32r16
 X 13 sort.ads
-1K9*sort 12|2w6 6r5 13|9e9
-3A14*array_to_sort(integer)<integer> 12|7r15
-5U19*sorter 12|32s9
-6U19*print_array 12|30s9
-7V18*get_array{3A14} 12|28s24
+1K9*sort 12|2w6 6r13 13|10e9
+2i9*SIZE{integer} 12|7r41
+3A14*array_to_sort(integer)<integer> 12|7r23
+4U19*sorter 12|32s9
+7U19*print_array 12|30s9
+8V18*get_array{3A14} 12|28s24
 

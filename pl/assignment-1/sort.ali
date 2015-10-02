@@ -1,13 +1,15 @@
 V "GNAT Lib v4.6"
 P SS ZX
-R nnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+R nnnnnnnnnnvnnnnnnnnnnnnnnvnnnvnnnnnnnvnnnvnnvnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
 
-U sort%b		sort.adb		91e290b3 NE OO PK IL KM
+U sort%b		sort.adb		1b860746 NE OO PK IL KM
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U sort%s		sort.ads		4d6da1f3 EE NE OO PK IL KM
+U sort%s		sort.ads		fdc06fb1 EE NE OO PK IL KM
 
 D ada.ads		20070406091342 3ffc8e18
 D a-except.ads		20090727140100 0c711ac9
@@ -22,8 +24,8 @@ D a-tiinio.ads		20090409150019 aa04e5d6
 D a-unccon.ads		20070406091342 f9eb8f06
 D interfac.ads		20090409150019 f77d8799
 D i-cstrea.ads		20100622165701 1bd72c32
-D sort.ads		20150927235526 4d6da1f3
-D sort.adb		20150928000749 12a94d30
+D sort.ads		20151001190847 fdc06fb1
+D sort.adb		20151001191335 28601487
 D system.ads		20140416172229 23e1f70b
 D s-crtl.ads		20100617122610 ac77b159
 D s-exctab.ads		20090417131547 66e51330
@@ -47,40 +49,54 @@ X 5 a-inteio.ads
 18K13*Integer_Text_IO[10|45] 15|1w10 5r33
 X 9 a-textio.ads
 49K13*Text_IO 472e16 15|2w10 6r33
-52P9*File_Type(370R9) 15|41r24
-53n23*In_File{53E9} 15|46r40
-93U14*Open 15|46s21
-99U14*Close 15|54s21
-167U14*New_Line 15|14s37
-184V13*End_Of_File{boolean} 15|48s31
+52P9*File_Type(370R9) 15|29r24
+53n23*In_File{53E9} 15|34r40
+93U14*Open 15|34s21
+99U14*Close 15|42s21
+167U14*New_Line 15|11s21 15s37 18s21 75s29 89s29 94s37 96s37 103s37 113s53
+184V13*End_Of_File{boolean} 15|36s31
+243U14*Put 15|76s29 88s29 93s37 104s37 116s53
 264U14*Put_Line 15|10s21
 X 10 a-tiinio.ads
-50U14*Get 15|49s29[5|18]
-65U14*Put 15|12s29[5|18] 33s37[5|18]
+50U14*Get 15|37s29[5|18]
+65U14*Put 15|13s29[5|18] 92s37[5|18] 105s37[5|18] 117s53[5|18]
 X 14 sort.ads
-1K9*sort 9l5 9e9 15|4b14 64l5 64t9
-2i9*SIZE{integer} 3r41
-3A14*array_to_sort(integer)<integer> 5r31 6r36 7r35 15|8r36 19r31 20r48 40r35
-. 44r16
-5U19*sorter 5>26 15|19b19 38l13 38t19
-5a26 list{3A14} 15|19b26 27r51 30r52 37r23
-6U19*print_array 6>31 15|8b19 17l13 17t24
-6a31 list{3A14} 15|8b31 11r26 12r33
-7V18*get_array{3A14} 15|40b18 57l13 57t22
+1K9*sort 10l5 10e9 15|4b14 132l5 132t9
+2i9*SIZE{integer} 15|22r50 32r34
+3A14*array_to_sort(integer)<integer> 4r31 5r39 5r61 6r47 6r69 7r36 8r35 15|8r36
+. 21r31 22r32 28r35 32r16 47r49 47r71 49r27 81r39 81r61 85r26 110r53 111r54
+4U19*sorter 4>26 15|21b19 26l13 26t19
+4a26 list{3A14} 15|21b26 25r39
+5V18*split{3A14} 5>24 15|25s33 81b18 118s62 119s63 124l21 124t26
+5a24 array_to_split{3A14} 15|81b24 85r41 90r37 91r28 92r41 95r45 97r40 99r40
+. 100r44 100r85 110r68 110r100 110r115 111r82
+6V18*merge{3A14} 6>24 6>35 15|47b18 79l21 79t26 120s59
+6a24 left_side{3A14} 15|47b25 48r43 50r43 55r47 56r36 57r68 69r44 70r74 70r98
+6a35 right_side{3A14} 15|47b36 48r62 51r44 55r83 56r63 60r68 72r45 73r74
+. 73r100
+7U19*print_array 7>31 15|8b19 19l13 19t24 77s25 90s25 95s33 114s49 115s49
+7a31 list{3A14} 15|8b31 12r26 13r33
+8V18*get_array{3A14} 15|28b18 45l13 45t22
 X 15 sort.adb
-5K17 IIO=5:33 12r25 33r33 49r25
-6K17 TIO=6:33 10r17 14r33 41r20 46r17 46r36 48r27 54r17
-11i21 i{integer} 12r38 13r28
-20U27 split 20b27 20>33 35l21 35t26 37s17
-20a33 array_to_split{14|3A14} 21r37
-21i17 middle{integer} 22r43 23r44 26r39 29r39 30r57
-22a17 first_array(integer) 27m33
-23a17 second_array(integer) 30m33 32r34 33r41
-26i29 i{integer} 27r45 27r56
-29i29 i{integer} 30r46 30r66
-32i29 i{integer} 33r54
-41p9 int_file{9|52P9} 46m26 48r43 49r33 54m27
-42i9 Index{integer} 50r30 51m25 51r34
-43i9 number{integer} 49m43 50r40
-44a9 list{14|3A14} 50m25 55r24
+5K17 IIO=5:33 13r25 37r25 92r33 105r33 117r49
+6K17 TIO=6:33 10r17 11r17 15r33 18r17 29r20 34r17 34r36 36r27 42r17 75r25
+. 76r25 88r25 89r25 93r33 94r33 96r33 103r33 104r33 113r49 116r49
+12i21 i{integer} 13r38 14r28
+22a17 sorted_array{14|3A14} 25m17
+29p9 int_file{9|52P9} 34m26 36r43 37r33 42m27
+30i9 Index{integer} 38r30 39m25 39r34
+31i9 number{integer} 37m43 38r40
+32a9 list{14|3A14} 38m25 43r24
+48i17 total_length{integer} 49r45
+49a17 results{14|3A14} 52r45 57m41 60m41 70m33 70r57 73m33 73r57 77r37 78r32
+50i17 left_pointer{integer} 55r31 56r46 57r78 58m41 58r57 69r28 70r84
+51i17 right_pointer{integer} 55r66 56r74 60r79 61m41 61r58 72r28 73r85
+52i17 result_pointer{integer} 57r49 60r49 63m33 63r51 70r41 73r41
+82i17 middle{integer} 100m33 101r52 102r63 106r36
+83i17 len{integer} 99m33 111r74 111r102
+84i17 mid{integer} 101m33 105r41 110r90 110r137 111r69 111r97
+85a17 sorted{14|3A14} 120m49 122r40
+86i17 right_side_mid{integer} 102m33 107m41
+110a41 left_side{14|3A14} 114r61 117r57 118m49 118r68 120r65
+111a41 right_side{14|3A14} 115r61 119m49 119r69 120r76
 
