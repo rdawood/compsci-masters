@@ -18,12 +18,13 @@ Package Body sort is
 		TIO.New_Line;
 	end print_array;
 
-	Procedure sorter(list:array_to_sort) is
-		sorted_array : array_to_sort (1..SIZE) := (others => 0);
+	Function mergeSort(list:array_to_sort) Return array_to_sort is
+		sorted_array : array_to_sort (list'First..list'Last) := (others => 0);
 
-	begin
-		sorted_array := split(list);
-	end sorter;
+		begin
+			sorted_array := split(list);
+			return sorted_array;
+		end mergeSort;
 
 	Function get_array return array_to_sort is
 	int_file : TIO.File_Type;	
@@ -72,9 +73,6 @@ Package Body sort is
 			if right_pointer <= right_side'Last then
 				results(result_pointer..results'Last) := right_side(right_pointer..right_side'Last);
 			end if;
-			TIO.New_Line;
-			TIO.Put("Results: ");
-			print_array(results);
 			return results;
 		end merge;
 
@@ -85,36 +83,22 @@ Package Body sort is
 		sorted : array_to_sort (array_to_split'Range) := (others => 0);
 		right_side_mid : Integer;
 		begin
-			TIO.Put("Array to split is: ");
-			TIO.New_Line;
-			print_array(array_to_split);
 			if array_to_split'Length <= 1 then
-				IIO.Put(array_to_split'first);
-				TIO.Put("Registered true, returning");
-				TIO.New_Line;
-				print_array(array_to_split);
-				TIO.New_Line;
 				return array_to_split;
 			else
 				len := array_to_split'Last;
 				middle := (array_to_split'Length / 2) + Integer'Pos(array_to_split'First);
 				mid := Integer'Val(middle);
 				right_side_mid := Integer'Val(middle);
-				TIO.New_Line;
-				TIO.Put("Middle is");
-				IIO.Put(mid);
 				if middle = 1 then
 					right_side_mid := 0;
 				end if;
 				declare
 					left_side : array_to_sort (array_to_split'First..mid-1) := array_to_split(array_to_split'First..mid-1);
 					right_side : array_to_sort (mid..len) := array_to_split(mid..len);
+
 					begin
 						TIO.New_Line;
-						print_array(left_side);
-						print_array(right_side);
-						TIO.Put("left_side length:");
-						IIO.Put(left_side'Length);
 						left_side := split(left_side);
 						right_side := split(right_side);
 						sorted := merge(left_side, right_side);
